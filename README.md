@@ -5,6 +5,8 @@
 This repository is a guide for installing Arch Linux from the live system booted with the official installation image. 
 > **Note:** I write this mainly for myself, as well as a guide especially for the Spanish-speaking community. In case you are English speaker or prefer to keep the language in English, just skip the steps relating to language settings.
 
+[Read the guide!](ArchLinux-InstallGuide.md)
+
 
 
 ## Tip (only for VirtualBox users)
