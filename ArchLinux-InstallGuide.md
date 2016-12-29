@@ -95,9 +95,15 @@ Once downloaded, when loading the operating system, the installation process off
     ~~~
     nano /etc/locale.gen
         // inside the file
-        #es_ES.UTF-8 => es_ES.UTF-8
+        #es_ES.UTF-8 => es_ES.UTF-8     # uncomment line
 
         // Save & Exit with ^X & Yes
+
+    nano /etc/locale.conf
+        // inside the file
+        LANG=es_ES.UTF-8    # write line
+
+        //Save & Exit with ^X & Yes
 
     locale-gen
     ~~~
@@ -202,6 +208,7 @@ After rebooting, we'll choose *Boot existing OS* option, and then,
     
         ~~~
         # Xorg Packages
+        pacman -S xorg-xinit
         pacman -S xorg-server xorg-server-utils xorg-utils xorg-apps
         pacman -S xorg-twm xorg-xclock xterm
         pacman -S xf86-video-fbdev [and/or] pacman -S xf86-video-vesa
@@ -211,17 +218,34 @@ After rebooting, we'll choose *Boot existing OS* option, and then,
         pacman -S ttf-dejavu ttf-droid ttf-inconsolata
         ~~~
 
-    2. Install ***XFCE*** desktop
+    2. Install ***i3*** desktop
     
         ~~~
-        pacman -S xfce4 xfce4-goodies
+        pacman -Syy i3-wm i3status i3lock dmenu termite dunst nitrogen
+        // i3-wm: window manager | i3status: monitor status panel | i3lock: lockscreen | dmenu: application launcher | termite: terminal emulator | dunst: notificator | nitrogen: wallpaper generator
+
+        nano ~/.xinitrc
+            // inside the file, add this line [or] this line instead:
+            exec i3 [or] exec i3 -V >> ~/i3log-$(date +'%F-%k-%M-%S') 2>&1
+
+        nano ~/.config/i3/config
+            // inside the file, add this line
+            exec --no-startup-id setxkbmap -layout es   # load keyboard layout 'es'
         ~~~
 
-    3. Once installed if we type in the console `startxfce4`, we can already see the desktop:
+    3. Once installed if we type in the console `startx`, we can already see the desktop:
         ~~~
-        startxfce4
-        ~~~
+        startx
 
-    > ![archXfceDesktop](img/archXfceDesktop.png)        
+        /*
+        A message will appear asking you to create a configuration file in $HOME, or if you want to create the file manually. Press Enter to create the file in $HOME which will be hosted in the following path: ~/.config/i3/config.
+
+        Then it will show another message that requests that we define that command key we want to use: Windows or Alt, in my case I selected the Windows key.
+        
+
+        For more information, please visit: [i3wm UnOfficial Guide](http://lasventanasenmosaico.blogspot.com.es/2016/05/instalar-y-configurar-i3wm-en-archlinux.html)
+        */
+        ~~~
+      
 
 
