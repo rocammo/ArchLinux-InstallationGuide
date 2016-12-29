@@ -49,4 +49,6 @@ See the REFERENCES file for the full text of the references.
 ## Useful Links
 => [VBox Guest Addition Tools](https://tecnologiaparticipativa.wordpress.com/2016/06/18/instalar-virtualbox-guest-additions-en-arch-linux/)
 
+=> [i3-gaps](https://github.com/Airblader/i3/wiki/Compiling-&-Installing)
+
 => [Pacman Basic Command Guide](http://sobrebits.com/guia-de-comandos-basicos-de-pacman-en-archlinux-y-derivadas/)
