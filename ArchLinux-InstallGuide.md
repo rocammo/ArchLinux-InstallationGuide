@@ -236,16 +236,11 @@ After rebooting, we'll choose *Boot existing OS* option, and then,
     3. Once installed if we type in the console `startx`, we can already see the desktop:
         ~~~
         startx
-
-        /*
-        A message will appear asking you to create a configuration file in $HOME, or if you want to create the file manually. Press Enter to create the file in $HOME which will be hosted in the following path: ~/.config/i3/config.
-
-        Then it will show another message that requests that we define that command key we want to use: Windows or Alt, in my case I selected the Windows key.
-        
-
-        For more information, please visit: [i3wm UnOfficial Guide](http://lasventanasenmosaico.blogspot.com.es/2016/05/instalar-y-configurar-i3wm-en-archlinux.html)
-        */
         ~~~
-      
 
+> A message will appear asking you to create a configuration file in $HOME, or if you want to create the file manually. Press Enter to create the file in $HOME which will be hosted in the following path: ~/.config/i3/config.
+> 
+> Then it will show another message that requests that we define that command key we want to use: Windows or Alt, in my case I selected the Windows key.
+> 
+> For more information, please visit: [i3wm UnOfficial Guide](http://lasventanasenmosaico.blogspot.com.es/2016/05/instalar-y-configurar-i3wm-en-archlinux.html)
 
